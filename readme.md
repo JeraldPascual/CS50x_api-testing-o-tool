@@ -1,5 +1,5 @@
 # 🔍 API Testing O' Tool
-
+![JeraldPascual](assets/CS50x.png)
 ## Overview:
 
 This API Testing Tool is a modern, browser-based application designed to help developers and learners interactively test, analyze, and understand RESTful APIs. Inspired by tools like Postman but built for simplicity and accessibility, this tool is implemented using **HTML**, **CSS**, and **JavaScript**. It requires no installation or backend server, making it ideal for quick API exploration, debugging, and learning.
