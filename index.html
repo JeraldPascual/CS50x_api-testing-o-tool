@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>API Test O` Tool</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css">
+
+  </head>
+  <body>
+    <h1>API Testing O' Tool</h1>
+    <div class="flex-section">
+      <div class="input-panel">
+        <!-- Example for API URL -->
+        <label for="url">API URL</label>
+        <small class="info-text">The full address of the API endpoint you want to test.</small>
+        <input
+          id="url"
+          placeholder="https://jsonplaceholder.typicode.com/posts"
+        />
+
+        <label for="method">HTTP Method</label>
+        <small class="info-text">Select the HTTP method to use for your request (GET, POST, etc).</small>
+  
+        <select id="method">
+          <option>GET</option>
+          <option>POST</option>
+          <option>PUT</option>
+          <option>DELETE</option>
+        </select>
+
+        <label for="auth">Authorization Token (optional)</label>
+        <small class="info-text">If the API requires authentication, paste your Bearer token or API key here.</small>
+
+        <input id="auth" placeholder="Bearer YOUR_TOKEN" />
+
+        <label for="headers">Custom Headers (JSON format)</label>
+        <small class="info-text">Add any extra HTTP headers your API needs, in JSON format.</small>
+
+        <textarea
+          id="headers"
+          rows="4"
+          placeholder='{"Content-Type": "application/json"}'
+        ></textarea>
+
+        <label for="body">Request Body (for POST/PUT)</label>
+        <small class="info-text">Provide the data to send with your request, usually in JSON format. Only used for POST or PUT.</small>
+
+        <textarea
+          id="body"
+          rows="6"
+          placeholder='{"title": "foo", "body": "bar", "userId": 1}'
+        ></textarea>
+
+        <button onclick="analyzeAPI()">Send Request</button>
+      </div>
+
+      <div class="results-panel" id="results">
+        <!-- Response output goes here -->
+      </div>
+    </div>
+
+    <canvas id="chart" height="500px"></canvas>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
